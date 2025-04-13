@@ -1,0 +1,39 @@
+--------------- Build Started: 11/17/2024 19:52:05 Project: Timing_Analysis, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
+The code generation step is up to date.
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/main.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c main.c -o .\CortexM3\ARM_GCC_541\Debug\main.o
+main.c: In function 'main':
+main.c:205:9: warning: statement with no effect [-Wunused-value]
+         sinf((float)i);
+         ^
+main.c:54:20: warning: unused variable 'result' [-Wunused-variable]
+     volatile float result=0.0f;
+                    ^
+main.c:53:18: warning: unused variable 'mul' [-Wunused-variable]
+     volatile int mul = 1;
+                  ^
+main.c:52:20: warning: unused variable 'fsum' [-Wunused-variable]
+     volatile float fsum = 0;
+                    ^
+main.c:51:20: warning: unused variable 'quotient' [-Wunused-variable]
+     volatile float quotient = 1;
+                    ^
+main.c:50:23: warning: unused variable 'product' [-Wunused-variable]
+     volatile unsigned product = 1;
+                       ^
+main.c:49:23: warning: unused variable 'sum' [-Wunused-variable]
+     volatile uint32_t sum = 0;
+                       ^
+main.c:48:10: warning: unused variable 'StrMsg' [-Wunused-variable]
+     char StrMsg[50];
+          ^
+arm-none-eabi-ar.exe -rs .\CortexM3\ARM_GCC_541\Debug\Timing_Analysis.a .\CortexM3\ARM_GCC_541\Debug\CyDmac.o .\CortexM3\ARM_GCC_541\Debug\CyFlash.o .\CortexM3\ARM_GCC_541\Debug\CyLib.o .\CortexM3\ARM_GCC_541\Debug\cyPm.o .\CortexM3\ARM_GCC_541\Debug\CySpc.o .\CortexM3\ARM_GCC_541\Debug\cyutils.o .\CortexM3\ARM_GCC_541\Debug\cy_em_eeprom.o .\CortexM3\ARM_GCC_541\Debug\UART_LOG.o .\CortexM3\ARM_GCC_541\Debug\UART_LOG_PM.o .\CortexM3\ARM_GCC_541\Debug\UART_LOG_INT.o .\CortexM3\ARM_GCC_541\Debug\UART_LOG_BOOT.o .\CortexM3\ARM_GCC_541\Debug\UART_LOG_IntClock.o .\CortexM3\ARM_GCC_541\Debug\Pin_LEDRED.o .\CortexM3\ARM_GCC_541\Debug\Pin_LEDGREEN.o .\CortexM3\ARM_GCC_541\Debug\Pin_LEDYELLOW.o .\CortexM3\ARM_GCC_541\Debug\SYSCOUNTER1.o .\CortexM3\ARM_GCC_541\Debug\SYSCOUNTER1_PM.o .\CortexM3\ARM_GCC_541\Debug\CLOCK1.o .\CortexM3\ARM_GCC_541\Debug\isr_1msecTick.o .\CortexM3\ARM_GCC_541\Debug\isr_2SecTick.o .\CortexM3\ARM_GCC_541\Debug\CLOCK2.o .\CortexM3\ARM_GCC_541\Debug\SYSCOUNTER2.o .\CortexM3\ARM_GCC_541\Debug\SYSCOUNTER2_PM.o .\CortexM3\ARM_GCC_541\Debug\CyBootAsmGnu.o
+arm-none-eabi-ar.exe: creating .\CortexM3\ARM_GCC_541\Debug\Timing_Analysis.a
+arm-none-eabi-gcc.exe -Wl,--start-group -o "C:\Users\divya\Documents\PSoC Creator\AMA_LAB1\Timing_Analysis.cydsn\CortexM3\ARM_GCC_541\Debug\Timing_Analysis.elf" .\CortexM3\ARM_GCC_541\Debug\main.o .\CortexM3\ARM_GCC_541\Debug\Analyzer.o .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o .\CortexM3\ARM_GCC_541\Debug\cymetadata.o .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o .\CortexM3\ARM_GCC_541\Debug\Timing_Analysis.a "C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CortexM3\ARM_GCC_541\Debug\CyComponentLibrary.a" -mcpu=cortex-m3 -mthumb -L Generated_Source\PSoC5 -L -lm -Wl,-Map,.\CortexM3\ARM_GCC_541\Debug/Timing_Analysis.map -T Generated_Source\PSoC5\cm3gcc.ld -u _printf_float -Wl,--gc-sections -g -ffunction-sections -Og -ffat-lto-objects -Wl,--end-group
+cyelftool.exe -C "C:\Users\divya\Documents\PSoC Creator\AMA_LAB1\Timing_Analysis.cydsn\CortexM3\ARM_GCC_541\Debug\Timing_Analysis.elf" --flash_row_size 256 --flash_size 262144 --flash_offset 0x00000000
+No ELF section .cychecksum found, creating one
+Application checksum calculated and stored in ELF section .cychecksum
+Checksum calculated and stored in ELF section .cymeta
+cyelftool.exe -S "C:\Users\divya\Documents\PSoC Creator\AMA_LAB1\Timing_Analysis.cydsn\CortexM3\ARM_GCC_541\Debug\Timing_Analysis.elf"
+Flash used: 4744 of 262144 bytes (1.8%).
+SRAM used: 3633 of 65536 bytes (5.5%). Stack: 2048 bytes. Heap: 128 bytes.
+--------------- Build Succeeded: 11/17/2024 19:52:07 ---------------
